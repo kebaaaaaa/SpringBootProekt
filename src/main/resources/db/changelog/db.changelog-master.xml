@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="classpath:/db/changelog/001_create_roles_table.xml"/>
+    <include file="classpath:/db/changelog/002_create_users_table.xml"/>
+    <include file="classpath:/db/changelog/003_create_car_details_table.xml"/>
+    <include file="classpath:/db/changelog/004_create_cars_table.xml"/>
+    <include file="classpath:/db/changelog/005_create_rentals_table.xml"/>
+    <include file="classpath:/db/changelog/006_create_services_table.xml"/>
+    <include file="classpath:/db/changelog/007_create_car_service_table.xml"/>
+    <include file="classpath:/db/changelog/008_create_car_images_table.xml"/>
+    <include file="classpath:/db/changelog/009_add_sample_data.xml"/>
+
+</databaseChangeLog>

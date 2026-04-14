@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars - AutoPark</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AutoPark</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cars.html" class="active">Cars</a></li>
+                    <li><a href="rentals.html">Rentals</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="users.html">Users</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Car Fleet</h1>
+                <p>Browse our available vehicles</p>
+            </div>
+        </section>
+
+        <section class="cars-list">
+            <div class="container">
+                <div class="search-filter">
+                    <input type="text" placeholder="Search cars...">
+                    <select>
+                        <option value="">All Categories</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="truck">Truck</option>
+                        <option value="convertible">Convertible</option>
+                    </select>
+                    <button>Search</button>
+                </div>
+                
+                <div class="cars-grid">
+                    <!-- Car cards will be populated dynamically via JavaScript/API -->
+                    <div class="car-card">
+                        <img src="images/car1.jpg" alt="Car">
+                        <div class="car-info">
+                            <h3>Toyota Camry</h3>
+                            <p class="car-details">Sedan • 2022 • Automatic</p>
+                            <p class="price">$45/day</p>
+                            <button class="btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="car-card">
+                        <img src="images/car2.jpg" alt="Car">
+                        <div class="car-info">
+                            <h3>Honda CR-V</h3>
+                            <p class="car-details">SUV • 2021 • Automatic</p>
+                            <p class="price">$55/day</p>
+                            <button class="btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="car-card">
+                        <img src="images/car3.jpg" alt="Car">
+                        <div class="car-info">
+                            <h3>Ford Mustang</h3>
+                            <p class="car-details">Convertible • 2023 • Manual</p>
+                            <p class="price">$70/day</p>
+                            <button class="btn-primary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AutoPark. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cars.js"></script>
+</body>
+</html>

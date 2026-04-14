@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - AutoPark</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AutoPark</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="rentals.html">Rentals</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="users.html">Users</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Maintenance & Services</h1>
+                <p>Track vehicle maintenance and service history</p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                <div class="service-actions">
+                    <a href="#" class="btn-primary">New Service Record</a>
+                </div>
+                
+                <div class="service-filters">
+                    <input type="text" placeholder="Search services...">
+                    <select>
+                        <option value="">All Services</option>
+                        <option value="oil-change">Oil Change</option>
+                        <option value="brake-service">Brake Service</option>
+                        <option value="tire-rotation">Tire Rotation</option>
+                        <option value="inspection">Inspection</option>
+                    </select>
+                    <input type="date">
+                    <button>Filter</button>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-tint"></i>
+                        <h3>Oil Change</h3>
+                        <p>Regular oil changes to keep engines running smoothly</p>
+                        <p><strong>Cost:</strong> $45</p>
+                        <p><strong>Frequency:</strong> Every 5,000 miles</p>
+                        <a href="#" class="btn-primary">Schedule</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-cog"></i>
+                        <h3>Brake Service</h3>
+                        <p>Comprehensive brake inspection and service</p>
+                        <p><strong>Cost:</strong> $120</p>
+                        <p><strong>Frequency:</strong> Every 25,000 miles</p>
+                        <a href="#" class="btn-primary">Schedule</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-route"></i>
+                        <h3>Tire Rotation</h3>
+                        <p>Rotate tires for even wear and longer life</p>
+                        <p><strong>Cost:</strong> $25</p>
+                        <p><strong>Frequency:</strong> Every 7,500 miles</p>
+                        <a href="#" class="btn-primary">Schedule</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Vehicle Inspection</h3>
+                        <p>Multi-point inspection for safety and reliability</p>
+                        <p><strong>Cost:</strong> $80</p>
+                        <p><strong>Frequency:</strong> Annually</p>
+                        <a href="#" class="btn-primary">Schedule</a>
+                    </div>
+                </div>
+                
+                <div class="service-history">
+                    <h2>Recent Service History</h2>
+                    <div class="service-table-wrapper">
+                        <table class="service-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Vehicle</th>
+                                    <th>Service Type</th>
+                                    <th>Cost</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2026-04-10</td>
+                                    <td>Toyota Camry #ABC123</td>
+                                    <td>Oil Change</td>
+                                    <td>$45</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2026-04-08</td>
+                                    <td>Honda CR-V #XYZ789</td>
+                                    <td>Brake Service</td>
+                                    <td>$120</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2026-04-05</td>
+                                    <td>Ford Mustang #DEF456</td>
+                                    <td>Tire Rotation</td>
+                                    <td>$25</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AutoPark. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="9" author="avtopark">
+        <!-- Insert default roles -->
+        <insert tableName="roles">
+            <column name="id" value="1"/>
+            <column name="name" value="ADMIN"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="id" value="2"/>
+            <column name="name" value="USER"/>
+        </insert>
+        
+        <!-- Insert sample admin user (password: admin123) -->
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="email" value="admin@avtopark.com"/>
+            <column name="username" value="admin"/>
+            <column name="password" value="admin123"/>
+            <column name="role_id" value="1"/>
+        </insert>
+        
+        <!-- Insert sample regular user (password: user123) -->
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="email" value="user@avtopark.com"/>
+            <column name="username" value="user"/>
+            <column name="password" value="user123"/>
+            <column name="role_id" value="2"/>
+        </insert>
+        
+        <!-- Insert sample car details -->
+        <insert tableName="car_details">
+            <column name="id" value="1"/>
+            <column name="description" value="Luxury sedan with premium features"/>
+            <column name="color" value="Black"/>
+            <column name="seating_capacity" value="5"/>
+            <column name="fuel_type" value="PETROL"/>
+        </insert>
+        <insert tableName="car_details">
+            <column name="id" value="2"/>
+            <column name="description" value="Compact car ideal for city driving"/>
+            <column name="color" value="White"/>
+            <column name="seating_capacity" value="4"/>
+            <column name="fuel_type" value="ELECTRIC"/>
+        </insert>
+        
+        <!-- Insert sample cars -->
+        <insert tableName="cars">
+            <column name="id" value="1"/>
+            <column name="brand" value="Mercedes-Benz"/>
+            <column name="model" value="E-Class"/>
+            <column name="year" value="2022"/>
+            <column name="mileage" value="15000"/>
+            <column name="price" value="80.00"/>
+            <column name="car_details_id" value="1"/>
+        </insert>
+        <insert tableName="cars">
+            <column name="id" value="2"/>
+            <column name="brand" value="Tesla"/>
+            <column name="model" value="Model 3"/>
+            <column name="year" value="2023"/>
+            <column name="mileage" value="5000"/>
+            <column name="price" value="60.00"/>
+            <column name="car_details_id" value="2"/>
+        </insert>
+        
+        <!-- Insert sample services -->
+        <insert tableName="services">
+            <column name="id" value="1"/>
+            <column name="name" value="Oil Change"/>
+            <column name="description" value="Standard oil change service"/>
+            <column name="price" value="50.00"/>
+        </insert>
+        <insert tableName="services">
+            <column name="id" value="2"/>
+            <column name="name" value="Tire Rotation"/>
+            <column name="description" value="Rotate tires for even wear"/>
+            <column name="price" value="30.00"/>
+        </insert>
+        <insert tableName="services">
+            <column name="id" value="3"/>
+            <column name="name" value="Brake Inspection"/>
+            <column name="description" value="Comprehensive brake system check"/>
+            <column name="price" value="75.00"/>
+        </insert>
+        
+        <!-- Associate services with cars -->
+        <insert tableName="car_service">
+            <column name="car_id" value="1"/>
+            <column name="service_id" value="1"/>
+        </insert>
+        <insert tableName="car_service">
+            <column name="car_id" value="1"/>
+            <column name="service_id" value="2"/>
+        </insert>
+        <insert tableName="car_service">
+            <column name="car_id" value="2"/>
+            <column name="service_id" value="1"/>
+        </insert>
+        <insert tableName="car_service">
+            <column name="car_id" value="2"/>
+            <column name="service_id" value="3"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
